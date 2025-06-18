@@ -1,0 +1,408 @@
+@font-face {
+    font-family: "OTEnjoystoriesBA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GmarketSansMedium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2")
+            format("woff2"),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff")
+            format("woff"),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf")
+            format("opentype");
+}
+
+:root {
+    --color-main-bg: #5b2386;
+    --color-main-yellow: #f5df4d;
+    --color-white: #fff;
+    --color-black: #222;
+    --font-ot-enjoy: "OTEnjoystoriesBA", sans-serif;
+    --font-gmarket-bold: "GmarketSansBold", sans-serif;
+    --font-gmarket-medium: "GmarketSansMedium", sans-serif;
+    --font-noto-kr: "Noto Sans KR", sans-serif;
+    --font-size-main: 24px;
+    --font-size-quote: clamp(22px, 2.5vw, 36px);
+    --font-size-strong: 50px;
+    --font-size-btn: 24px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: var(--color-main-bg);
+    color: var(--color-white);
+    text-align: center;
+    gap: 102px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 147px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.training-form,
+.training-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 115px;
+}
+
+.training-result .button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+    margin-top: 32px;
+}
+
+h1 {
+    background-image: url("../img/title.png"), url("../img/clock.png");
+    background-size: contain, 261px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    width: clamp(267px, 60vw, 564px);
+    height: 265px;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.quote {
+    font-family: var(--font-ot-enjoy);
+    color: var(--color-main-yellow);
+    font-size: var(--font-size-quote);
+    width: clamp(297px, 50vw, 486px);
+    margin-top: 46px;
+    margin-bottom: 78px;
+}
+
+.description {
+    background-image: url("../img/quotes.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: var(--font-gmarket-medium);
+    width: clamp(290px, 50vw, 600px);
+}
+
+.description strong {
+    font-family: var(--font-gmarket-bold);
+    font-size: 2rem;
+}
+
+.training-form p {
+    font-family: var(--font-gmarket-medium);
+    font-weight: 400;
+    font-size: var(--font-size-main);
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+}
+
+.training-form p input {
+    border-radius: 7px;
+    font-family: var(--font-gmarket-medium);
+    font-weight: 400;
+    font-size: var(--font-size-main);
+    line-height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    width: 228px;
+    height: 57px;
+}
+
+.training-form button {
+    font-family: var(--font-gmarket-bold);
+    font-weight: 700;
+    font-size: var(--font-size-btn);
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--color-main-bg);
+    background-color: var(--color-main-yellow);
+
+    width: 565;
+    height: 66;
+    top: 1071px;
+    left: 678px;
+    border-radius: 56px;
+    padding-top: 21px;
+    padding-right: 49px;
+    padding-bottom: 21px;
+    padding-left: 49px;
+    gap: 10px;
+}
+
+.training-result p {
+    font-family: var(--font-gmarket-bold);
+    font-weight: 400;
+    font-size: var(--font-size-main);
+    line-height: 100%;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+}
+
+.training-result p strong {
+    font-family: var(--font-gmarket-bold);
+    font-weight: 700;
+    font-size: var(--font-size-strong);
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.training-result .go-training {
+    font-family: var(--font-gmarket-medium);
+    font-weight: 700;
+    font-size: var(--font-size-btn);
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    color: var(--color-main-bg);
+    background-color: var(--color-main-yellow);
+
+    width: 356;
+    height: 66;
+    top: 1572px;
+    left: 678px;
+    border-radius: 56px;
+    padding-top: 21px;
+    padding-right: 49px;
+    padding-bottom: 21px;
+    padding-left: 49px;
+    gap: 10px;
+}
+
+.training-result .share-btn {
+    font-family: var(--font-gmarket-medium);
+    font-weight: 700;
+    font-size: var(--font-size-btn);
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--color-main-bg);
+    background-color: var(--color-white);
+
+    width: 191;
+    height: 66;
+    top: 1572px;
+    left: 1052px;
+    border-radius: 56px;
+    padding-top: 21px;
+    padding-right: 49px;
+    padding-bottom: 21px;
+    padding-left: 49px;
+    gap: 10px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border: none;
+    padding: 0;
+}
+
+.modal[open] {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    width: clamp(330px, 30vw, 800px);
+    height: clamp(550px, 0vw, 816px);
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content header {
+    font-family: "OTEnjoystoriesBA", sans-serif;
+    color: #5b2386;
+}
+
+.modal-content header h2 {
+    font-size: clamp(64px, 50vw, 96px);
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.modal-content header p {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.modal-content main {
+    background-image: url("../img/licat.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    width: 100%;
+    flex: 1;
+}
+
+.modal-content footer button {
+    font-family: "GmarketSansBold", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    color: #5b2386;
+    background-color: #fcee21;
+    border-radius: 8px;
+    padding: 15px 15px 15px 15px;
+    border: none;
+    margin-bottom: 42px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+footer small {
+    font-family: var(--font-noto-kr);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+    body {
+        gap: 62px;
+    }
+
+    main {
+        gap: 64px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    .quote {
+        font-size: 22px;
+        margin-top: 31px;
+        margin-bottom: 62px;
+    }
+    .description {
+        font-size: 14px;
+    }
+
+    .training-form {
+        gap: 49px;
+    }
+
+    .training-form p {
+        font-size: 14px;
+        line-height: 40px;
+    }
+    .training-result p {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .training-form p input {
+        font-size: 14px;
+        padding: 4px 8px;
+        width: 156px;
+        height: 37px;
+    }
+    .training-form button {
+        font-size: 20px;
+        padding: 16px 20px;
+        border-radius: 8px;
+    }
+
+    .training-result {
+        gap: 55px;
+    }
+
+    .training-result p strong {
+        font-size: 2rem;
+    }
+    .training-result .button-group button {
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    .modal-content header h2 span {
+        display: none;
+    }
+}
